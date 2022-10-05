@@ -1,7 +1,7 @@
 // variables to keep track of quiz state
-    // currentQuestion
-    // time
-    // timerId
+    var currentQuestion
+    var time
+    var timerId
 
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
@@ -10,11 +10,23 @@ var questionsEl = document.getElementById('questions');
 /* FUNCTION TO START THE QUIZ */
 function startQuiz() {
     // hide start screen
+    var startScreen = document.getElementById("start-screen");
+    if (startScreen.style.display === "none") {
+        startScreen.style.display = "block";
+    } else {
+        startScreen.style.display = "none";
+    }
+  
 
     // un-hide questions section
-
+ var questionTab = document.getElementById("questions");
+ if (startScreen.style.display = "none") {
+    questionTab.style.display = "yes"
+ } else {
+    
+ }
     // start timer
-
+    var timerId = Math.floor((time % (1000 * 60)) / 1000);
     // show starting time
 
     getQuestion();
